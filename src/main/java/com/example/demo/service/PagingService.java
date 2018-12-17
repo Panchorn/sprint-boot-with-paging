@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Customer;
+import com.example.demo.entity.Customer;
 import com.example.demo.repository.PagingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,7 +24,7 @@ public class PagingService {
     public Page<Customer> getData(Integer page, Integer perPage, Sort.Direction orderBy, String sort) {
         PageRequest pageRequest = PageRequest.of(page, perPage, orderBy, sort);
 
-        List<Customer> customerList = pagingRepository.getData();
+        List<Customer> customerList = pagingRepository.findAll();
 
         int start = (page-1) * perPage;
         int end = start+perPage;
