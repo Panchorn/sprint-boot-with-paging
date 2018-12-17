@@ -32,10 +32,10 @@ public class PagingApplication {
     }
 
     private List<Customer> getData() {
-        Customer customer0 = new Customer(0L, "John", "j", 25);
-        Customer customer1 = new Customer(1L, "Chris", "c", 27);
-        Customer customer2 = new Customer(2L, "Smith", "s", 21);
-        Customer customer3 = new Customer(3L, "Dean", "d", 23);
+        Customer customer0 = new Customer("John", "j", 25);
+        Customer customer1 = new Customer("Chris", "c", 27);
+        Customer customer2 = new Customer("Smith", "s", 21);
+        Customer customer3 = new Customer("Dean", "d", 23);
         return Arrays.asList(customer0, customer1, customer2, customer3);
     }
 

@@ -1,6 +1,5 @@
 package com.example.demo.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -12,10 +11,15 @@ import javax.persistence.Id;
 
 @Data
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Customer {
+
+    public Customer(String name, String nickname, int age) {
+        this.name = name;
+        this.nickname = nickname;
+        this.age = age;
+    }
 
     @Id
     @GeneratedValue
